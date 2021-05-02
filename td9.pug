@@ -1,0 +1,10 @@
+body(style="background-color : black")
+img(src="/public/Umbrel.jpg" alt="Logo Umbrella" style ="position : absolute; top : 0; left : 0; right : 0; bottom : 0; margin : auto; pointer-events: none;")
+p#activite(style="position :absolute; color : whitesmoke")= "NaN"
+
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+script.
+    $("#activite").load( "total" );
+    setInterval(function(){
+        $("#activite").load( "total" );
+    }, 30000);
